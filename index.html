@@ -21,8 +21,108 @@ Released   : 20130505
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
+<meta name="viewport" content="width=1200, initial-scale=1">
+<style>
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
 </head>
 <body>
+
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
@@ -43,10 +143,63 @@ Released   : 20130505
 			<li class="last"><a href="iletisim.html">İletişim</a></li>
 		</ul>
 	</div>
-	<div id="banner"><img src="images/header-image-bg.jpg" width="1200" height="400" alt="" /></div>
-	<div id="three-columns">
+	<div class="slideshow-container">
+
+	<div class="mySlides fade">
+  	<div class="numbertext">1 / 6</div>
+  	<img src="1.jpg" width="1200" height="650">
+  	<div class="text">Caption Text</div>
+	</div>
+
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 6</div>
+ 	 <img src="2.jpg" width="1200" height="650">
+ 	 <div class="text">Caption Two</div>
+	</div>
+
+	<div class="mySlides fade">
+ 	 <div class="numbertext">3 / 6</div>
+ 	 <img src="3.jpg" width="1200" height="650">
+  	<div class="text">Caption Three</div>
+	</div>
+
+	<div class="mySlides fade">
+  	<div class="numbertext">4 / 6</div>
+  	<img src="4.jpg" width="1200" height="650">
+  	<div class="text">Caption four</div></div>
+	
+
+	<div class="mySlides fade">
+  	<div class="numbertext">5 / 6</div>
+  	<img src="5.jpg" width="1200" height="650">
+  	<div class="text">Caption five</div>
+	</div>
+
+	<div class="mySlides fade">
+  	<div class="numbertext">6 / 6</div>
+  	<img src="6.jpg" width="1200" height="650">
+  	<div class="text">Caption six</div>
+	</div>
+
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+ 	 <span class="dot" onclick="currentSlide(1)"></span> 
+ 	 <span class="dot" onclick="currentSlide(2)"></span> 
+ 	 <span class="dot" onclick="currentSlide(3)"></span> 
+	 <span class="dot" onclick="currentSlide(4)"></span>
+	 <span class="dot" onclick="currentSlide(5)"></span>
+	 <span class="dot" onclick="currentSlide(6)"></span>
+	</div>
+ 	<div id="three-columns">
 		<div class="content">
 			<div id="column1">
+			
 				<h2>Doktor Listesi ve Bilgileri: </h2>
 				<p> <strong>-Dr.Feyza ÇOLDAŞ 19.05.12 Nolu aile hekimi</strong></p>
 				</ul>
@@ -56,17 +209,17 @@ Released   : 20130505
 					<p> <strong>Alacahöyük Aile Sağlığı Merkezi No:113/4 <br />Alacahöyük Beldesi/ALACA/ÇORUM<br />Tel:0 533 052 08 52</strong></p>
 				</ul>
 				<div class="mapouter"><div class="gmap_canvas"><iframe width="280" height="330" id="gmap_canvas" src="https://maps.google.com/maps?q=alacah%C3%B6y%C3%BCk%20asm&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://youtube-embed-code.com">youtube embed code</a><style>.mapouter{position:relative;text-align:right;height:330px;width:280px;}.gmap_canvas {overflow:hidden;background:none!important;height:330px;width:280px;}</style><a href="https://maps-google.github.io/embed-google-map/"></a></div></div>
+			
+				<p><br></br><img src="saat.jpg" width="750" height="470" alt="" /></p>
 			</div>
 			<div id="column2">
-				<h2>Çalışma Saatleri</h2>
-				<p><img src="images/pics01.jpg" width="430" height="200" alt="" /></p>
                                 <h2>Kurumsal</h2>
-				<p>Kurumumuzda, sahip olduğumuz etik değerleri muhafaza ederek, bizden sağlık hizmeti talep eden bireylerin beklentilerini en iyi şekilde karşılamaya, insana,saygı duymayı ve bundan dolayı hastalarımıza gerekli ilgi ve özeni göstermeye gayret ediyoruz.</p>
+				<p>Aile Sağlığı Merkezimizde amacımız kayıtlı nüfusumuzun sağlığını geliştirmek, korumak, tedavi etmek ve rehabilitasyonu için sağlık hizmetine katkı sağlayan tüm toplum kaynakları ile işbirliği içinde olarak, bilimin güncel katkısına açık, güvenilir, güler yüzlü, iletişime ve gelişmeye açık, kolay ulaşılan, sağlığı vazgeçilmez bir insan hakkı olarak gören ve bağlı bulunduğu bireylerin tüm sağlık sorumluluğunu üstlenen örnek bir Aile Sağlığı Merkezi olmaktır.</p>
 				<h2>Kadromuz</h2>
-				<p><img src="doktor.jpg" width="430" height="200" alt="" /></p>
-				<h2><center>Dr. Feyza ÇOLDAŞ</center></h2>
-				<p> <strong>Aile Hekimi	:	Dr.Feyza ÇOLDAŞ<br />Birim Kodu	:	  19.05.12 Nolu Aile Hekimi <br />Aile Sağlığı Elemanı :<br />Hemşire Şeyma ŞENTÜRK<br />Telefon	:	0533 052 08 52</strong></p>
-				
+				<h3><strong>Aile Hekimi	:	Dr.Feyza ÇOLDAŞ</strong></h3>
+				<p> <strong>Birim Kodu	:	  19.05.12 Nolu Aile Hekimi</strong></p>
+				<h3><strong>Aile Sağlığı Elemanı :Hemşire Şeyma ŞENTÜRK</strong></h3>
+				<p> <strong>Telefon	:	0533 052 08 52</strong></p>
 			</div>
 			<div id="column3">
 				<h2>Blog</h2>
@@ -104,5 +257,33 @@ Released   : 20130505
 <div id="footer">
 	<p>&copy; Untitled. All rights reserved. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a></p>
 </div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </body>
 </html>
